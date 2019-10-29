@@ -1,10 +1,15 @@
 import React from 'react';
+import styled from 'styled-components'
+
+const List = styled.li`
+color: blue;
+`
 
 const Todo = props => {
   return (
-    <li className="todo-item" style={props.todo.completed ? { textDecoration: 'line-through'} : {}} onClick={() => props.toggleTodo(props.todo.id)}>
+    <List style={props.todo.completed ? { textDecoration: 'line-through'} : {}} onClick={() => props.toggleTodo(props.todo.id)}>
       {props.todo.task}
-    </li>
+    </List>
   )
 }
 
